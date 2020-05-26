@@ -12,7 +12,7 @@ app.use(compression())
 app.use(express.json())
 
 import dzRoutes from './routes'
-app.use('/dz-api', dzRoutes)
+app.use('/api', dzRoutes)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     const error = new Error('Not Found')
