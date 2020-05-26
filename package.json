@@ -4,6 +4,7 @@
   "description": "dz-communes api",
   "main": "index.ts",
   "scripts": {
+    "start": "node dist/index.js", 
     "watch-ts": "tsc -w",
     "watch-node": "nodemon dist/index.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
