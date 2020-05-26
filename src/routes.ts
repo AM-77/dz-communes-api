@@ -1,33 +1,15 @@
 import express = require("express")
-import { Request, Response } from "express"
 const dzRouter = express.Router()
+import { getWilayas, getWilaya, getCommunes, getCommune, getAll, getOne } from './controllers'
 
-dzRouter.get("/w",  (req: Request, res: Response) => {
-  
-})
+dzRouter.get("/w", getWilayas)
+dzRouter.get("/w/:code", getWilaya)
 
-dzRouter.get("/w/:id",  (req: Request, res: Response) => {
-  
-})
+dzRouter.get("/c", getCommunes)
+dzRouter.get("/c/:code", getCommune)
 
-
-dzRouter.get("/c",  (req: Request, res: Response) => {
-  
-})
-
-dzRouter.get("/c/:id",  (req: Request, res: Response) => {
-  
-})
-
-
-
-dzRouter.get("/w-c",  (req: Request, res: Response) => {
-  
-})
-
-dzRouter.get("/w-c/:id",  (req: Request, res: Response) => {
-  
-})
+dzRouter.get("/all", getAll)
+dzRouter.get("/all/:code", getOne)
 
 
 

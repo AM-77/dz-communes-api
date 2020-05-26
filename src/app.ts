@@ -1,9 +1,12 @@
 import express = require("express")
+import favicon = require('serve-favicon')
+import path = require('path')
 import { Request, Response, NextFunction } from 'express'
 import compression = require('compression')
 import cors = require('cors')
 
 const app = express()
+app.use(favicon('./favicon.png'))
 app.use('*', cors())
 app.use(compression())
 app.use(express.json())
