@@ -44,5 +44,8 @@
     "dz-communes": "^1.0.1",
     "express": "^4.17.1",
     "serve-favicon": "^2.5.0"
+  },
+  "engines": {
+    "node": "13.x"
   }
 }
