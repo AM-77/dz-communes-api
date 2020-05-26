@@ -11,6 +11,4 @@ dzRouter.get("/c/:code", getCommune)
 dzRouter.get("/all", getAll)
 dzRouter.get("/all/:code", getOne)
 
-
-
 export default dzRouter

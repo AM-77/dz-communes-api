@@ -9,6 +9,8 @@ app.use(compression())
 app.use(express.json())
 
 import dzRoutes from './routes'
+app.get('/', (req: Request, res: Response) => { res.send({ message: "Check the documentation on https://github.com/AM-77/dz-communes-api#readme" }) })
+app.get('/favicon.ico', (req: Request, res: Response) => { res.status(204) })
 app.use('/api', dzRoutes)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
