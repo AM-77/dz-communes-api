@@ -6,7 +6,7 @@ import compression = require('compression')
 import cors = require('cors')
 
 const app = express()
-app.use(favicon('./favicon.png'))
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')))
 app.use('*', cors())
 app.use(compression())
 app.use(express.json())
