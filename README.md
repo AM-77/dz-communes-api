@@ -1,4 +1,4 @@
-# dz-communes-api (WIP)
+# dz-communes-api
 > API for the Algeria's wilayas and their communes.
 
 ## routes
