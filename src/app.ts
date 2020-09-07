@@ -9,7 +9,18 @@ app.use(compression())
 app.use(express.json())
 
 import dzRoutes from './routes'
-app.get('/', (req: Request, res: Response) => { res.send({ message: "Check the documentation on https://github.com/AM-77/dz-communes-api#readme" }) })
+
+const docs = {
+    "/api/w": "All wilayas.",
+    "/api/w/{wilaya-code}": "Specific wilaya.",
+    "/api/c": "All communes.",
+    "/api/c/{wilaya-code}": "All communes of a specific wilaya.",
+    "/api/all": "All wilayas with all their communes (more detailed).",
+    "/api/all/{wilaya-code}": "A  Specific wilaya with all it's communes (more detailed).",
+    "more infos": "check the source code: https://github.com/AM-77/dz-communes-api"
+}
+
+app.get("/", (req: Request, res: Response) => { res.status(200).send(docs) })
 app.get('/favicon.ico', (req: Request, res: Response) => { res.status(204) })
 app.use('/api', dzRoutes)
 
